@@ -1,18 +1,15 @@
-import { MantineProvider, MantineThemeOverride } from '@mantine/core';
-import { ReactNode } from 'react';
+import { MantineProvider, MantineThemeOverride } from '@mantine/core'
+import { ReactNode } from 'react'
 
 const theme: MantineThemeOverride = {
-    /** Put your Mantine theme overrides here */
-};
+  fontFamily: 'Roboto, sans-serif',
+  headings: { fontFamily: 'Roboto, sans-serif' },
+}
 
 interface MainProviderProps {
-    children: ReactNode;
+  children: ReactNode
 }
 
 export default function MainProvider({ children }: MainProviderProps) {
-    return (
-        <MantineProvider theme={theme}>
-            {children}
-        </MantineProvider>
-    );
+  return <MantineProvider theme={theme}>{children}</MantineProvider>
 }
