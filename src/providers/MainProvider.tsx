@@ -14,7 +14,7 @@ const CONTAINER_SIZES: Record<string, string> = {
   md: rem(640),
   lg: rem(768),
   xl: rem(900),
-  xxl: rem(1200),
+  xxl: rem(1400),
 }
 
 const theme: MantineThemeOverride = createTheme({
