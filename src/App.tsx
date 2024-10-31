@@ -6,8 +6,6 @@ import rainyJpg from './assets/rainy.jpeg'
 import MainProvider from './providers/MainProvider.tsx'
 import { WeatherInfo } from './components/WeatherInfo.tsx'
 import { Activities } from './components/Activities.tsx'
-import { Forecast } from './components/Forecast.tsx'
-import { AirConditions } from './components/AirConditions.tsx'
 
 function App() {
   return (
@@ -42,6 +40,7 @@ function App() {
         />
         <AppShell.Main>
           <WeatherInfo />
+          <Activities />
         </AppShell.Main>
       </AppShell>
     </MainProvider>
