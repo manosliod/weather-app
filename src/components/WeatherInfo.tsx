@@ -1,5 +1,6 @@
 import { Card, Text, Flex } from '@mantine/core'
 import { FaCloudSun } from 'react-icons/fa'
+import { IoMdPin } from 'react-icons/io'
 import { useMediaQuery } from '@mantine/hooks'
 import { weatherInfo } from '../data/weather'
 import dayjs from 'dayjs'
@@ -11,7 +12,15 @@ export function WeatherInfo() {
     <Card bg="transparent" py="xl" style={{ minHeight: '308px' }}>
       <Flex direction="row">
         <Flex>
-          <Text size={isDesktop ? '24px' : '18px'} style={{ fontWeight: 500 }}>
+          <Text
+            size={isDesktop ? '24px' : '18px'}
+            style={{
+              fontWeight: 500,
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <IoMdPin size={24} style={{ marginInlineEnd: 8 }} />
             {weatherInfo.location}
           </Text>
         </Flex>

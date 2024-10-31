@@ -1,11 +1,15 @@
 import { Card, Image, Text, Flex } from '@mantine/core'
 import { weatherActivities } from '../data/weather'
+import { IconHeartFilled } from '@tabler/icons-react'
 import { MyCard } from './common/MyCard.tsx'
 
 export function Activities() {
   return (
     <MyCard px={48} style={{ maxWidth: 885 }}>
-      <Text size="lg">Activities in your area</Text>
+      <Text size="lg" style={{ display: 'flex', alignItems: 'center' }}>
+        <IconHeartFilled size={24} style={{ marginInlineEnd: 8 }} />
+        Activities in your area
+      </Text>
       <Flex>
         {weatherActivities.map((activity, index) => (
           <Card
