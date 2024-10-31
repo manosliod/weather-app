@@ -1,5 +1,5 @@
 import { Avatar, Stack, Text } from '@mantine/core'
-import reactSvg from '../../assets/react.svg'
+import avatarPng from '../../assets/avatar.png'
 import { WiDayHail } from 'react-icons/wi'
 import { FaCompass } from 'react-icons/fa'
 import { IoMdPin } from 'react-icons/io'
@@ -9,7 +9,7 @@ import { MyCard } from '../common/MyCard.tsx'
 export function LeftSidebar() {
   return (
     <MyCard style={{ height: '100%' }}>
-      <Avatar src={reactSvg} size="lg" />
+      <Avatar src={avatarPng} size="lg" />
       <Stack align="center" mt="auto">
         <Stack align="center" gap={2}>
           <WiDayHail size={40} />

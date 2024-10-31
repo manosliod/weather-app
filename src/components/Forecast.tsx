@@ -13,7 +13,7 @@ export function Forecast() {
   }))
 
   return (
-    <MyCard px={48} style={{ maxWidth: 892 }}>
+    <MyCard px={40} style={{ maxWidth: 892 }}>
       <Text
         size="lg"
         style={{ fontWeight: 500, display: 'flex', alignItems: 'center' }}
