@@ -20,21 +20,6 @@ const CONTAINER_SIZES: Record<string, string> = {
 const theme: MantineThemeOverride = createTheme({
   fontFamily: 'Inter, sans-serif',
   headings: { fontFamily: 'Inter, sans-serif' },
-  colors: {
-    dark: [
-      '#fff',
-      '#f8f9fa',
-      '#e9ecef',
-      '#dee2e6',
-      '#ced4da',
-      '#adb5bd',
-      '#6c757d',
-      '#495057',
-      '#343a40',
-      '#212529',
-    ],
-  },
-  primaryColor: 'dark', // Ensures that white color is used as the primary color
   components: {
     Container: Container.extend({
       vars: (_, { size, fluid }) => ({
@@ -57,7 +42,7 @@ interface MainProviderProps {
 export default function MainProvider({ children }: MainProviderProps) {
   return (
     <MantineProvider theme={theme}>
-      <Container size="xxl">{children} </Container>
+      <Container size="xxl">{children}</Container>
     </MantineProvider>
   )
 }
