@@ -1,4 +1,34 @@
-export const weatherForecast = [
+export const weeklyForecast = [
+  {
+    date: 'SUN',
+    weatherType: 'rainy',
+  },
+  {
+    date: 'MON',
+    weatherType: 'rainy-sun',
+  },
+  {
+    date: 'TUE',
+    weatherType: 'cloudy-sun',
+  },
+  {
+    date: 'WEN',
+    weatherType: 'cloudy',
+  },
+  {
+    date: 'THU',
+    weatherType: 'sun',
+  },
+  {
+    date: 'FRI',
+    weatherType: 'rainy-sun',
+  },
+  {
+    date: 'SAT',
+    weatherType: 'rainy',
+  },
+]
+export const _24HourForecast = [
   {
     time: '00:00',
     airSpeed: 15,

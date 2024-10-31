@@ -1,11 +1,14 @@
-import { LineChart } from '@mantine/charts'
-import { weatherForecast } from '../data/weather'
-import { MyCard } from './shared/MyCard.tsx'
-import { Flex, Text } from '@mantine/core'
+import '@mantine/charts/styles.css'
+
 import { IconClockHour3Filled } from '@tabler/icons-react'
 
+import { LineChart } from '@mantine/charts'
+import { Flex, Text } from '@mantine/core'
+import { _24HourForecast } from '../data/weather'
+import { MyCard } from './shared/MyCard.tsx'
+
 export function Forecast() {
-  const data = weatherForecast.map((point) => ({
+  const data = _24HourForecast.map((point) => ({
     time: point.time,
     temp: point.temp,
     airSpeed: point.airSpeed,

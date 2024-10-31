@@ -10,7 +10,7 @@ export function LeftSidebar() {
   return (
     <MyCard style={{ height: '100%' }}>
       <Avatar src={avatarPng} size="lg" />
-      <Stack align="center" mt="auto">
+      <Stack align="center" mt="auto" gap="lg">
         <Stack align="center" gap={2}>
           <WiDayHail size={40} />
           <Text size="xs" style={{ fontWeight: 600 }}>

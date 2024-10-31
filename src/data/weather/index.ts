@@ -1,6 +1,12 @@
 import { weatherInfo } from './info'
-import { weatherForecast } from './forecast'
 import { weatherActivities } from './activities'
 import { weatherAirConditions } from './airConditions'
+import { _24HourForecast, weeklyForecast } from './forecast'
 
-export { weatherInfo, weatherForecast, weatherActivities, weatherAirConditions }
+export {
+  weatherInfo,
+  _24HourForecast,
+  weeklyForecast,
+  weatherActivities,
+  weatherAirConditions,
+}

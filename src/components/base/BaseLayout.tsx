@@ -25,7 +25,7 @@ export function BaseLayout({ children }: SidebarProps) {
           me={isDesktop ? 24 : undefined}
           w={!isDesktop ? '100%' : undefined}
         >
-          {!isDesktop && <WeeklyForecast />}
+          {!isDesktop && <WeeklyForecast style={{ paddingInline: 24 }} />}
           {children}
         </Flex>
         {isDesktop && (

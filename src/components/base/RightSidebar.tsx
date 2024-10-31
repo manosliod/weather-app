@@ -1,7 +1,12 @@
 import { Flex, Stack, Text } from '@mantine/core'
 
 import { WiThermometer } from 'react-icons/wi'
-import { IconWind, IconDropletFilled, IconSun } from '@tabler/icons-react'
+import {
+  IconWind,
+  IconDropletFilled,
+  IconSun,
+  IconClockHour8Filled,
+} from '@tabler/icons-react'
 
 import { MyCard } from '../shared/MyCard.tsx'
 import { WeeklyForecast } from '../shared/WeeklyForecast.tsx'
@@ -13,10 +18,23 @@ export function RightSidebar() {
       py={32}
       style={{ height: '100%', minWidth: 280, width: '100%' }}
     >
-      <Flex>
-        <WeeklyForecast />
-      </Flex>
       <Flex direction="column">
+        <WeeklyForecast />
+        <Flex direction="column">
+          <Text
+            size="18px"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <IconClockHour8Filled size={24} style={{ marginInlineEnd: 4 }} />
+            8:00 PM GMT
+          </Text>
+        </Flex>
+      </Flex>
+      <Flex direction="column" mt={24}>
         <Text size="14px">AIR CONDITIONS</Text>
         <Stack gap="xl" justify="space-evenly">
           <Stack mt={16}>
@@ -30,7 +48,7 @@ export function RightSidebar() {
               </Flex>
             </Flex>
           </Stack>
-          <Stack mt={24}>
+          <Stack>
             <Flex>
               <Flex direction="column">
                 <IconWind size={22} style={{ marginInlineEnd: 4 }} />
@@ -41,7 +59,7 @@ export function RightSidebar() {
               </Flex>
             </Flex>
           </Stack>
-          <Stack mt={24}>
+          <Stack>
             <Flex>
               <Flex direction="column">
                 <IconDropletFilled size={22} style={{ marginInlineEnd: 4 }} />
@@ -52,7 +70,7 @@ export function RightSidebar() {
               </Flex>
             </Flex>
           </Stack>
-          <Stack mt={24}>
+          <Stack>
             <Flex>
               <Flex direction="column">
                 <IconSun size={22} style={{ marginInlineEnd: 4 }} />
