@@ -1,8 +1,8 @@
-import { Card, Image, Text, Flex } from '@mantine/core'
 import { weatherActivities } from '../data/weather'
+import { Card, Image, Text, Flex } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 import { IconHeartFilled } from '@tabler/icons-react'
 import { MyCard } from './common/MyCard.tsx'
-import { useMediaQuery } from '@mantine/hooks'
 
 export function Activities() {
   const isDesktop = useMediaQuery('(min-width: 768px)')
