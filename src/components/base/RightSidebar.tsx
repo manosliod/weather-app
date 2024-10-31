@@ -3,8 +3,8 @@ import { Flex, Text } from '@mantine/core'
 import { WiThermometer } from 'react-icons/wi'
 import { IconWind, IconDropletFilled, IconSun } from '@tabler/icons-react'
 
-import { MyCard } from '../common/MyCard.tsx'
-import { WeeklyForecast } from '../WeeklyForecast.tsx'
+import { MyCard } from '../shared/MyCard.tsx'
+import { WeeklyForecast } from '../shared/WeeklyForecast.tsx'
 
 export function RightSidebar() {
   return (

@@ -1,6 +1,6 @@
 import { LineChart } from '@mantine/charts'
 import { weatherForecast } from '../data/weather'
-import { MyCard } from './common/MyCard.tsx'
+import { MyCard } from './shared/MyCard.tsx'
 import { Flex, Text } from '@mantine/core'
 import { IconClockHour3Filled } from '@tabler/icons-react'
 

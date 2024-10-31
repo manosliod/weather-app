@@ -4,7 +4,7 @@ import { WiDayHail } from 'react-icons/wi'
 import { FaCompass } from 'react-icons/fa'
 import { IoMdPin } from 'react-icons/io'
 import { IconSettings } from '@tabler/icons-react'
-import { MyCard } from '../common/MyCard.tsx'
+import { MyCard } from '../shared/MyCard.tsx'
 
 export function LeftSidebar() {
   return (

@@ -3,7 +3,7 @@ import { Flex } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { LeftSidebar } from './LeftSidebar.tsx'
 import { RightSidebar } from './RightSidebar.tsx'
-import { WeeklyForecast } from '../WeeklyForecast.tsx'
+import { WeeklyForecast } from '../shared/WeeklyForecast.tsx'
 
 interface SidebarProps {
   children: ReactNode
