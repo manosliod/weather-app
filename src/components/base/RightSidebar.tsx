@@ -16,7 +16,7 @@ export function RightSidebar() {
     <MyCard
       px={24}
       py={32}
-      style={{ height: '100%', minWidth: 280, width: '100%' }}
+      style={{ height: '100%', maxWidth: 300, width: '100%' }}
     >
       <Flex direction="column">
         <WeeklyForecast />

@@ -9,7 +9,7 @@ export function Activities() {
 
   return (
     isDesktop && (
-      <MyCard px={40} style={{ maxWidth: 888, width: 'max-content' }}>
+      <MyCard px={40} style={{ maxWidth: 888, width: '100%' }}>
         <Text size="lg" style={{ display: 'flex', alignItems: 'center' }}>
           <IconHeartFilled size={24} style={{ marginInlineEnd: 8 }} />
           Activities in your area

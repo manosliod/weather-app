@@ -14,7 +14,7 @@ export function BaseLayout({ children }: SidebarProps) {
 
   return (
     <>
-      <Flex>
+      <Flex justify="space-evenly">
         {isDesktop && (
           <Flex direction="column" me={24}>
             <LeftSidebar />

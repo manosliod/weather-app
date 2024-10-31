@@ -8,13 +8,13 @@ import {
 import { ReactNode } from 'react'
 
 const CONTAINER_SIZES: Record<string, string> = {
-  xxs: rem(380),
-  xs: rem(480),
-  sm: rem(576),
-  md: rem(640),
-  lg: rem(768),
-  xl: rem(900),
-  xxl: rem(1400),
+  xxs: rem(480),
+  xs: rem(576),
+  sm: rem(640),
+  md: rem(768),
+  lg: rem(991),
+  xl: rem(1200),
+  xxl: rem(1500),
 }
 
 const theme: MantineThemeOverride = createTheme({
