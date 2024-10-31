@@ -2,14 +2,14 @@ import { weatherActivities } from '../data/weather'
 import { Card, Image, Text, Flex, Group } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { IconHeartFilled } from '@tabler/icons-react'
-import { MyCard } from './common/MyCard.tsx'
+import { MyCard } from './shared/MyCard.tsx'
 
 export function Activities() {
   const isDesktop = useMediaQuery('(min-width: 768px)')
 
   return (
     isDesktop && (
-      <MyCard px={40} style={{ maxWidth: 892 }}>
+      <MyCard px={40} style={{ maxWidth: 888, width: 'max-content' }}>
         <Text size="lg" style={{ display: 'flex', alignItems: 'center' }}>
           <IconHeartFilled size={24} style={{ marginInlineEnd: 8 }} />
           Activities in your area

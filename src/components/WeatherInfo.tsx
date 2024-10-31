@@ -57,7 +57,7 @@ export function WeatherInfo() {
 
         {isDesktop && (
           <Flex>
-            <FaCloudSun size={300} />
+            <FaCloudSun size={280} />
           </Flex>
         )}
       </Flex>
