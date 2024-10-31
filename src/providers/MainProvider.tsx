@@ -2,8 +2,8 @@ import { MantineProvider, MantineThemeOverride } from '@mantine/core'
 import { ReactNode } from 'react'
 
 const theme: MantineThemeOverride = {
-  fontFamily: 'Roboto, sans-serif',
-  headings: { fontFamily: 'Roboto, sans-serif' },
+  fontFamily: 'Inter, sans-serif',
+  headings: { fontFamily: 'Inter, sans-serif' },
   colors: {
     dark: [
       '#fff',
