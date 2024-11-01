@@ -14,16 +14,16 @@ export default function Activities() {
       <Flex wrap="wrap">
         {/* Map through the weatherActivities to create individual cards */}
         {weatherActivities.map((activity, index) => (
-          <Group gap="xs" key={index}>
+          <Group gap="xs" key={index} justify="space-between">
             <Card bg="transparent" px="12px">
               <Image
                 src={activity.image}
                 alt={activity.description}
                 fit="cover"
                 radius="10"
-                width={160}
+                width={150}
                 height={100}
-                style={{ minWidth: 160, maxHeight: 100 }}
+                style={{ minWidth: 150, maxHeight: 100 }}
               />
               <Text size="12px" mt="xs">
                 {activity.distance} away
