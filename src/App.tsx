@@ -3,14 +3,17 @@ import './App.css'
 
 import { AppShell } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
+import { Suspense, lazy } from 'react'
 
 import rainyJpg from '@assets/rainy.jpeg'
 import MainProvider from '@providers/MainProvider.tsx'
 import { BaseHeader } from '@components/base/BaseHeader.tsx'
 import { BaseLayout } from '@components/base/BaseLayout.tsx'
-import { WeatherInfo } from '@components/WeatherInfo.tsx'
-import { Activities } from '@components/Activities.tsx'
-import { Forecast } from '@components/Forecast.tsx'
+
+// Dynamically import components
+const WeatherInfo = lazy(() => import('@components/WeatherInfo.tsx'))
+const Activities = lazy(() => import('@components/Activities.tsx'))
+const Forecast = lazy(() => import('@components/Forecast.tsx'))
 
 function App() {
   const isDesktop = useMediaQuery('(min-width: 768px)')
@@ -47,11 +50,13 @@ function App() {
         />
         <AppShell.Main>
           <BaseHeader />
-          <WeatherInfo />
-          <BaseLayout>
-            {isDesktop && <Activities />}
-            <Forecast />
-          </BaseLayout>
+          <Suspense fallback={<div>Loading...</div>}>
+            <WeatherInfo />
+            <BaseLayout>
+              {isDesktop && <Activities />}
+              <Forecast />
+            </BaseLayout>
+          </Suspense>
         </AppShell.Main>
       </AppShell>
     </MainProvider>
