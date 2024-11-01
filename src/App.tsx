@@ -46,7 +46,7 @@ function App() {
         <AppShell.Main>
           <WeatherInfo />
           <BaseLayout>
-            <Activities />
+            {isDesktop && <Activities />}
             <Forecast />
           </BaseLayout>
         </AppShell.Main>
