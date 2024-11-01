@@ -7,6 +7,14 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+    "baseUrl": "./src", // Base directory for resolving paths
+    "paths": {
+      "@components/*": ["components/*"], // Alias for components
+      "@providers/*": ["providers/*"], // Alias for providers
+      "@assets/*": ["assets/*"], // Alias for assets
+      "@data/*": ["data/*"] // Alias for data
+    },
+
     /* Bundler mode */
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
