@@ -1,36 +1,64 @@
 import '@mantine/core/styles.css'
 import './App.css'
 
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import MainProvider from './MainProvider'
+import { AppShell, Loader } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
+import { Suspense, lazy } from 'react'
+
+import rainyJpg from '@assets/rainy.jpeg'
+import MainProvider from '@providers/MainProvider.tsx'
+import { BaseHeader } from '@components/base/BaseHeader.tsx'
+import { BaseLayout } from '@components/base/BaseLayout.tsx'
+
+// Dynamically import components
+const WeatherInfo = lazy(() => import('@components/WeatherInfo.tsx'))
+const Activities = lazy(() => import('@components/Activities.tsx'))
+const Forecast = lazy(() => import('@components/Forecast.tsx'))
 
 function App() {
-  const [count, setCount] = useState(0)
+  const isDesktop = useMediaQuery('(min-width: 768px)')
 
   return (
     <MainProvider>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <AppShell
+        padding="md"
+        styles={() => ({
+          root: {
+            minHeight: '100dvh',
+            color: 'white',
+          },
+          main: {
+            width: '100%',
+            height: '100%',
+            paddingInline: isDesktop ? '2rem' : '1rem',
+          },
+        })}
+      >
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundImage: `url(${rainyJpg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'blur(2px)', // Apply blur here
+            zIndex: 0,
+          }}
+        />
+        <AppShell.Main>
+          <BaseHeader />
+          <Suspense fallback={<Loader color="rgba(255, 255, 255, 1)" />}>
+            <WeatherInfo />
+            <BaseLayout>
+              {isDesktop && <Activities />}
+              <Forecast />
+            </BaseLayout>
+          </Suspense>
+        </AppShell.Main>
+      </AppShell>
     </MainProvider>
   )
 }
