@@ -21,6 +21,7 @@ export default function MyCard({ children, style, ...props }: MyCardProps) {
         backdropFilter: 'blur(30px)',
         padding: '1.5rem',
         boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+        border: '1px #9c9e98 solid',
         ...style, // Merge any additional custom styles passed in props
       }}
       {...props} // Spread the remaining props onto Mantine's Card component

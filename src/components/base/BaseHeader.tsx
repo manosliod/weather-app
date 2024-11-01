@@ -3,12 +3,14 @@ import { IoMdPin } from 'react-icons/io'
 import { weatherInfo } from '@data/weather'
 import { useMediaQuery } from '@mantine/hooks'
 
+import ProfileMenu from '@components/shared/ProfileMenu.tsx'
+
 export function BaseHeader() {
   const isDesktop = useMediaQuery('(min-width: 768px)')
 
   return (
     <Card bg="transparent" pt="xl" pb={0}>
-      <Flex direction="row">
+      <Flex direction="row" justify="space-between">
         <Flex>
           {/* Location section */}
           <Text
@@ -24,6 +26,11 @@ export function BaseHeader() {
             {weatherInfo.location}
           </Text>
         </Flex>
+        {!isDesktop && (
+          <Flex>
+            <ProfileMenu />
+          </Flex>
+        )}
       </Flex>
     </Card>
   )

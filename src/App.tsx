@@ -1,7 +1,7 @@
 import '@mantine/core/styles.css'
 import './App.css'
 
-import { AppShell } from '@mantine/core'
+import { AppShell, Loader } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { Suspense, lazy } from 'react'
 
@@ -50,7 +50,7 @@ function App() {
         />
         <AppShell.Main>
           <BaseHeader />
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loader color="rgba(255, 255, 255, 1)" />}>
             <WeatherInfo />
             <BaseLayout>
               {isDesktop && <Activities />}
