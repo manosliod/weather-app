@@ -17,7 +17,7 @@ export function BaseLayout({ children }: SidebarProps) {
   return (
     <>
       {/* Main Flex container to align sidebars and content section */}
-      <Flex justify="space-evenly">
+      <Flex justify="space-between">
         {isDesktop && (
           // Left sidebar displayed only on desktop screens
           <Flex direction="column" me={24}>
