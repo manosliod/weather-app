@@ -1,7 +1,7 @@
-import activity1 from '../../assets/activities/activity1.jpeg'
-import activity2 from '../../assets/activities/activity2.jpeg'
-import activity3 from '../../assets/activities/activity3.jpeg'
-import activity4 from '../../assets/activities/activity4.jpeg'
+import activity1 from '@assets/activities/activity1.jpeg'
+import activity2 from '@assets/activities/activity2.jpeg'
+import activity3 from '@assets/activities/activity3.jpeg'
+import activity4 from '@assets/activities/activity4.jpeg'
 
 export const weatherActivities = [
   { image: activity1, distance: '2km', description: 'Park' },
