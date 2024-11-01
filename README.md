@@ -17,7 +17,8 @@ src
 ├── data                # Static data for the application
 │   └── weather         # Weather-related data (e.g., forecasts, air conditions)
 ├── providers           # Context providers for global state management
-└── index.css           # Global CSS
+├── index.css           # Global CSS
+└── main.tsx            # Entry point for the app
 ```
 
 ## **Folder Descriptions**
@@ -45,6 +46,8 @@ These layout components ensure consistent structure throughout the app and allow
 The `shared` folder holds reusable components that can be used across different sections of the app.
 
 - **`MyCard.tsx`**: A customizable card component with a frosted glass effect, providing a consistent UI container for weather data and navigation.
+- **`MyMenuItem.tsx`**: A  custom menu item component with optional styling for logout items.
+- **`ProfileMenu.tsx`**: Displays a user profile menu with options such as settings and logout.
 - **`WeeklyForecast.tsx`**: Renders the weekly forecast using a carousel layout, offering users a scrollable view of upcoming weather.
 
 These components help maintain a unified look and feel while simplifying the development of new features.
