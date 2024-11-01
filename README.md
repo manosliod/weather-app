@@ -12,6 +12,7 @@ src
 ├── assets              # Static assets such as images
 ├── components
 │   ├── base            # Layout components, like sidebars and main layout
+│   │   └── partials    # Subcomponents for base layout
 │   └── shared          # Shared components used throughout the app
 ├── data                # Static data for the application
 │   └── weather         # Weather-related data (e.g., forecasts, air conditions)
@@ -28,6 +29,7 @@ This folder contains the primary components of the app, divided into subfolders 
 #### **base**
 Houses layout components that structure the main page.
 
+- **`BaseHeader.tsx`**: Contains the main header for navigation and app branding.
 - **`BaseLayout.tsx`**: Organizes the overall page layout with left and right sidebars for desktop and a responsive mobile-friendly layout.
 - **`LeftSidebar.tsx`**: Displays user profile information and navigation options like **Weather**, **Explore**, **Cities**, and **Settings**.
 - **`RightSidebar.tsx`**: Provides weather-related data such as the weekly forecast, current time, and air conditions.
@@ -60,9 +62,21 @@ The `data` folder contains static data files, used to simulate API responses dur
 
 This folder includes context providers for managing global application state. For example, you might add providers for theming, user authentication, or API data.
 
+## **Path Aliases**
+
+To streamline imports, the following path aliases are set up in ```tsconfig.json```:
+```json
+    "paths": {
+      "@components/*": ["components/*"],
+      "@providers/*": ["providers/*"],
+      "@assets/*": ["assets/*"],
+      "@data/*": ["data/*"]
+    }
+```
+
 ## **Usage**
 
-1. **Clone the repository**:
+1. Clone the repository:
 
     ```bash
     git clone https://github.com/manosliod/weather-app.git
@@ -80,7 +94,7 @@ This folder includes context providers for managing global application state. Fo
 
 ## **Responsive Design**
 
-The app uses __Mantine's__ ```useMediaQuery``` hook to conditionally render sidebars and other layout elements based on screen size. The layout adjusts dynamically:
+The app uses **Mantine's** ```useMediaQuery``` hook to conditionally render sidebars and other layout elements based on screen size. The layout adjusts dynamically:
 
-- __Desktop View:__ Displays left and right sidebars with detailed weather data and navigation.
-- __Mobile View:__ Condenses the layout to optimize usability on smaller screens, displaying only essential components.
+- **Desktop View:** Displays left and right sidebars with detailed weather data and navigation.
+- **Mobile View:** Condenses the layout to optimize usability on smaller screens, displaying only essential components.
