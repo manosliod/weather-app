@@ -69,12 +69,14 @@ This folder includes context providers for managing global application state. Fo
 
 To streamline imports, the following path aliases are set up in ```tsconfig.json```:
 ```json
+{
     "paths": {
       "@components/*": ["components/*"],
       "@providers/*": ["providers/*"],
       "@assets/*": ["assets/*"],
       "@data/*": ["data/*"]
     }
+}
 ```
 
 ## **Usage**
@@ -85,9 +87,9 @@ To streamline imports, the following path aliases are set up in ```tsconfig.json
     git clone https://github.com/manosliod/weather-app.git
     cd weather-app 
     ```
-1. Install dependencies using ```npm install```. 
-2. Build the application using ```npm run build```.
-3. Run the application with ```npm run preview```.
+2. Install dependencies using ```npm install```. 
+3. Build the application using ```npm run build```.
+4. Run the application with ```npm run preview```.
 
 
 ## **Tech Stack**
