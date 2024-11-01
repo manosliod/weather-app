@@ -11,7 +11,7 @@ import {
   IconChevronLeft,
   IconChevronRight,
 } from '@tabler/icons-react'
-import { weeklyForecast } from '../../data/weather'
+import { weeklyForecast } from '@data/weather'
 import { useMediaQuery } from '@mantine/hooks'
 
 // Function to select the appropriate weather icon based on weather type
@@ -71,7 +71,7 @@ export function WeeklyForecast({ style }: WeeklyForecastProps) {
       <Carousel
         h={80}
         w="100%"
-        slideGap="xs"
+        slideGap="lg"
         slideSize="14%"
         initialSlide={3}
         dragFree

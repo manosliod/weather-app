@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 import { Flex } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
-import { LeftSidebar } from './LeftSidebar.tsx'
-import { RightSidebar } from './RightSidebar.tsx'
-import { WeeklyForecast } from '../shared/WeeklyForecast.tsx'
+import { LeftSidebar } from './partials/LeftSidebar.tsx'
+import { RightSidebar } from './partials/RightSidebar.tsx'
+import { WeeklyForecast } from '@components/shared/WeeklyForecast.tsx'
 
 // Define the props for BaseLayout, accepting children as ReactNode elements
 interface SidebarProps {

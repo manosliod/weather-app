@@ -1,7 +1,7 @@
-import { weatherActivities } from '../data/weather'
+import { weatherActivities } from '@data/weather'
 import { Card, Image, Text, Flex, Group } from '@mantine/core'
 import { IconHeartFilled } from '@tabler/icons-react'
-import { MyCard } from './shared/MyCard.tsx'
+import { MyCard } from '@components/shared/MyCard.tsx'
 
 export function Activities() {
   return (
@@ -21,9 +21,9 @@ export function Activities() {
                 alt={activity.description}
                 fit="cover"
                 radius="10"
-                width={178}
+                width={160}
                 height={100}
-                style={{ minWidth: 178, maxHeight: 100 }}
+                style={{ minWidth: 160, maxHeight: 100 }}
               />
               <Text size="12px" mt="xs">
                 {activity.distance} away

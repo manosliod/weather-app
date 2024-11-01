@@ -1,17 +1,17 @@
 import { Avatar, Stack, Text } from '@mantine/core'
-import avatarPng from '../../assets/avatar.png'
+import avatarPng from '../../../assets/avatar.png'
 import { WiDayHail } from 'react-icons/wi'
 import { FaCompass } from 'react-icons/fa'
 import { IoMdPin } from 'react-icons/io'
 import { IconSettings } from '@tabler/icons-react'
-import { MyCard } from '../shared/MyCard.tsx'
+import { MyCard } from '../../shared/MyCard.tsx'
 
 // LeftSidebar component to display user profile and navigation options
 export function LeftSidebar() {
   return (
     <MyCard style={{ height: '100%' }}>
       <Avatar src={avatarPng} size="lg" />
-      <Stack align="center" mt="auto" gap="lg">
+      <Stack align="center" mt="auto" gap="xl">
         {/* Section for Weather icon and label */}
         <Stack align="center" gap={2}>
           <WiDayHail size={40} /> {/* Weather icon */}

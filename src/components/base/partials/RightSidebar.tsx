@@ -8,8 +8,8 @@ import {
   IconClockHour8Filled,
 } from '@tabler/icons-react'
 
-import { MyCard } from '../shared/MyCard.tsx'
-import { WeeklyForecast } from '../shared/WeeklyForecast.tsx'
+import { MyCard } from '../../shared/MyCard.tsx'
+import { WeeklyForecast } from '../../shared/WeeklyForecast.tsx'
 
 // RightSidebar component displaying weekly forecast, time, and air condition information
 export function RightSidebar() {

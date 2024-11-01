@@ -2,13 +2,15 @@ import '@mantine/core/styles.css'
 import './App.css'
 
 import { AppShell } from '@mantine/core'
-import rainyJpg from './assets/rainy.jpeg'
-import MainProvider from './providers/MainProvider.tsx'
-import { WeatherInfo } from './components/WeatherInfo.tsx'
-import { Activities } from './components/Activities.tsx'
-import { BaseLayout } from './components/base/BaseLayout.tsx'
-import { Forecast } from './components/Forecast.tsx'
 import { useMediaQuery } from '@mantine/hooks'
+
+import rainyJpg from '@assets/rainy.jpeg'
+import MainProvider from '@providers/MainProvider.tsx'
+import { BaseHeader } from '@components/base/BaseHeader.tsx'
+import { BaseLayout } from '@components/base/BaseLayout.tsx'
+import { WeatherInfo } from '@components/WeatherInfo.tsx'
+import { Activities } from '@components/Activities.tsx'
+import { Forecast } from '@components/Forecast.tsx'
 
 function App() {
   const isDesktop = useMediaQuery('(min-width: 768px)')
@@ -44,6 +46,7 @@ function App() {
           }}
         />
         <AppShell.Main>
+          <BaseHeader />
           <WeatherInfo />
           <BaseLayout>
             {isDesktop && <Activities />}

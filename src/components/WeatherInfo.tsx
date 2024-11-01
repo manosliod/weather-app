@@ -1,32 +1,15 @@
-import { Card, Text, Flex } from '@mantine/core'
-import { FaCloudSun } from 'react-icons/fa'
-import { IoMdPin } from 'react-icons/io'
-import { useMediaQuery } from '@mantine/hooks'
-import { weatherInfo } from '../data/weather'
 import dayjs from 'dayjs'
+import { Card, Text, Flex } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
+import { FaCloudSun } from 'react-icons/fa'
+import { weatherInfo } from '@data/weather'
 
 export function WeatherInfo() {
   // Check if the screen width is at least 768px for desktop view
   const isDesktop = useMediaQuery('(min-width: 768px)')
 
   return (
-    <Card bg="transparent" py="xl" style={{ minHeight: '308px' }}>
-      <Flex direction="row">
-        <Flex>
-          {/* Location section */}
-          <Text
-            size={isDesktop ? '24px' : '18px'}
-            style={{
-              fontWeight: 500,
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <IoMdPin size={24} style={{ marginInlineEnd: 8 }} />
-            {weatherInfo.location}
-          </Text>
-        </Flex>
-      </Flex>
+    <Card bg="transparent" pt={16} pb="xl">
       <Flex
         direction={isDesktop ? 'row' : 'column'}
         justify={isDesktop ? 'space-between' : 'center'}
@@ -37,11 +20,7 @@ export function WeatherInfo() {
           style={{ textAlign: isDesktop ? 'left' : 'center' }}
         >
           {/* Weather type section */}
-          <Text
-            size={isDesktop ? '48px' : '24px'}
-            mt="sm"
-            style={{ fontWeight: 500 }}
-          >
+          <Text size={isDesktop ? '48px' : '24px'} style={{ fontWeight: 500 }}>
             {weatherInfo.weatherType}
           </Text>
           {/* Display sun icon for mobile view */}
@@ -64,7 +43,7 @@ export function WeatherInfo() {
         {/* Display sun icon for desktop view */}
         {isDesktop && (
           <Flex>
-            <FaCloudSun size={280} />
+            <FaCloudSun size={230} />
           </Flex>
         )}
       </Flex>
