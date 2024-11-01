@@ -4,10 +4,10 @@ import { WiDayHail } from 'react-icons/wi'
 import { FaCompass } from 'react-icons/fa'
 import { IoMdPin } from 'react-icons/io'
 import { IconSettings } from '@tabler/icons-react'
-import { MyCard } from '../../shared/MyCard.tsx'
+import MyCard from '../../shared/MyCard.tsx'
 
 // LeftSidebar component to display user profile and navigation options
-export function LeftSidebar() {
+export default function LeftSidebar() {
   return (
     <MyCard style={{ height: '100%' }}>
       <Avatar src={avatarPng} size="lg" />

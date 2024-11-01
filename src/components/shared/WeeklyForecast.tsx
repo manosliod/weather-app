@@ -38,7 +38,7 @@ interface WeeklyForecastProps {
 }
 
 // Main component to display a weekly weather forecast carousel
-export function WeeklyForecast({ style }: WeeklyForecastProps) {
+export default function WeeklyForecast({ style }: WeeklyForecastProps) {
   const emblaRef = useRef<Embla | null>(null)
   const [activeSlide, setActiveSlide] = useState(3) // Default to the 4th slide
   const isDesktop = useMediaQuery('(min-width: 768px)')

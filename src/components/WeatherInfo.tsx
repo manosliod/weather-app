@@ -4,7 +4,7 @@ import { useMediaQuery } from '@mantine/hooks'
 import { FaCloudSun } from 'react-icons/fa'
 import { weatherInfo } from '@data/weather'
 
-export function WeatherInfo() {
+export default function WeatherInfo() {
   // Check if the screen width is at least 768px for desktop view
   const isDesktop = useMediaQuery('(min-width: 768px)')
 

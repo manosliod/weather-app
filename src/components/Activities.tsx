@@ -1,9 +1,9 @@
 import { weatherActivities } from '@data/weather'
 import { Card, Image, Text, Flex, Group } from '@mantine/core'
 import { IconHeartFilled } from '@tabler/icons-react'
-import { MyCard } from '@components/shared/MyCard.tsx'
+import MyCard from '@components/shared/MyCard.tsx'
 
-export function Activities() {
+export default function Activities() {
   return (
     <MyCard px={40} style={{ maxWidth: 888, width: '100%' }}>
       <Text size="lg" style={{ display: 'flex', alignItems: 'center' }}>

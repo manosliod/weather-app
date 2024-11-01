@@ -5,9 +5,9 @@ import { IconClockHour3Filled } from '@tabler/icons-react'
 import { LineChart } from '@mantine/charts'
 import { Flex, Text } from '@mantine/core'
 import { _24HourForecast } from '@data/weather'
-import { MyCard } from '@components/shared/MyCard.tsx'
+import MyCard from '@components/shared/MyCard.tsx'
 
-export function Forecast() {
+export default function Forecast() {
   const data = _24HourForecast.map((point) => ({
     time: point.time,
     temp: point.temp,

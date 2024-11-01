@@ -1,9 +1,13 @@
-import { ReactNode } from 'react'
+import { lazy, ReactNode } from 'react'
 import { Flex } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
-import { LeftSidebar } from './partials/LeftSidebar.tsx'
-import { RightSidebar } from './partials/RightSidebar.tsx'
-import { WeeklyForecast } from '@components/shared/WeeklyForecast.tsx'
+
+// Dynamically import components
+const LeftSidebar = lazy(() => import('./partials/LeftSidebar.tsx'))
+const RightSidebar = lazy(() => import('./partials/RightSidebar.tsx'))
+const WeeklyForecast = lazy(
+  () => import('@components/shared/WeeklyForecast.tsx')
+)
 
 // Define the props for BaseLayout, accepting children as ReactNode elements
 interface SidebarProps {

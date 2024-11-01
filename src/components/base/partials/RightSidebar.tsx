@@ -1,6 +1,8 @@
-import { Flex, Stack, Text } from '@mantine/core'
+import { lazy } from 'react'
 
+import { Flex, Stack, Text } from '@mantine/core'
 import { WiThermometer } from 'react-icons/wi'
+
 import {
   IconWind,
   IconDropletFilled,
@@ -8,11 +10,11 @@ import {
   IconClockHour8Filled,
 } from '@tabler/icons-react'
 
-import { MyCard } from '../../shared/MyCard.tsx'
-import { WeeklyForecast } from '../../shared/WeeklyForecast.tsx'
+import MyCard from '../../shared/MyCard.tsx'
+const WeeklyForecast = lazy(() => import('../../shared/WeeklyForecast.tsx'))
 
 // RightSidebar component displaying weekly forecast, time, and air condition information
-export function RightSidebar() {
+export default function RightSidebar() {
   return (
     <MyCard
       px={24}

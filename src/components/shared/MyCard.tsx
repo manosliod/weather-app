@@ -8,7 +8,7 @@ interface MyCardProps extends CardProps {
 }
 
 // A reusable Card component that adapts styling based on screen size
-export function MyCard({ children, style, ...props }: MyCardProps) {
+export default function MyCard({ children, style, ...props }: MyCardProps) {
   // Detect if the current viewport width is at least 768px (Desktop breakpoint)
   const isDesktop = useMediaQuery('(min-width: 768px)')
 
