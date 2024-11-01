@@ -83,7 +83,8 @@ To streamline imports, the following path aliases are set up in ```tsconfig.json
     cd weather-app 
     ```
 1. Install dependencies using ```npm install```. 
-2. Run the application with ```npm start```.
+2. Build the application using ```npm run build```.
+3. Run the application with ```npm run preview```.
 
 
 ## **Tech Stack**
