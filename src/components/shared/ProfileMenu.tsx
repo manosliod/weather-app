@@ -9,10 +9,12 @@ import MyMenuItem from '@components/shared/MyMenuItem.tsx'
 export default function ProfileMenu() {
   return (
     <Menu shadow="md" width="auto">
+      {/* Menu.Target defines the clickable avatar icon that opens the menu */}
       <Menu.Target>
         <Avatar src={avatarPng} size={30} style={{ cursor: 'pointer' }} />
       </Menu.Target>
 
+      {/* Menu.Dropdown holds the menu items displayed when the menu is opened */}
       <Menu.Dropdown
         style={{
           borderRadius: 20,
@@ -22,12 +24,14 @@ export default function ProfileMenu() {
           border: '1px #9c9e98 solid',
         }}
       >
+        {/* MyMenuItem component representing different menu options */}
         <MyMenuItem
-          leftSection={<WiDayHail size={18} />}
-          style={{ borderRadius: 20 }}
+          leftSection={<WiDayHail size={18} />} // Weather icon
+          style={{ borderRadius: 20 }} // Consistent border radius with dropdown
         >
           Weather
         </MyMenuItem>
+
         <MyMenuItem leftSection={<FaCompass size={18} />}>Explore</MyMenuItem>
         <MyMenuItem leftSection={<IoMdPin size={18} />}>Cities</MyMenuItem>
         <MyMenuItem leftSection={<IconSettings size={18} />}>
