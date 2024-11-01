@@ -33,7 +33,7 @@ export default function Forecast() {
           withXAxis={false}
           withYAxis={false}
           withDots={false}
-          dataKey="temp"
+          dataKey="time"
           series={[{ name: 'Temperature', color: '#FFC355' }]}
           valueFormatter={() =>
             `<div>
