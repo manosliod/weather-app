@@ -11,6 +11,7 @@ import {
 import { MyCard } from '../shared/MyCard.tsx'
 import { WeeklyForecast } from '../shared/WeeklyForecast.tsx'
 
+// RightSidebar component displaying weekly forecast, time, and air condition information
 export function RightSidebar() {
   return (
     <MyCard
@@ -29,29 +30,33 @@ export function RightSidebar() {
               justifyContent: 'center',
             }}
           >
-            <IconClockHour8Filled size={24} style={{ marginInlineEnd: 4 }} />
+            <IconClockHour8Filled size={24} style={{ marginInlineEnd: 4 }} />{' '}
             8:00 PM GMT
           </Text>
         </Flex>
       </Flex>
+
       <Flex direction="column" mt={24}>
         <Text size="14px">AIR CONDITIONS</Text>
-        <Stack gap="xl" justify="space-evenly">
-          <Stack mt={16}>
-            <Flex>
-              <Flex direction="column">
-                <WiThermometer size={22} style={{ marginInlineEnd: 4 }} />
-              </Flex>
-              <Flex direction="column">
-                <Text>Real Feel</Text>
-                <Text size="16px">30o</Text>
-              </Flex>
-            </Flex>
-          </Stack>
+        {/* Stack for spacing air condition items */}
+        <Stack gap="xl" justify="space-evenly" mt={16}>
+          {/* Real Feel Section */}
           <Stack>
             <Flex>
               <Flex direction="column">
-                <IconWind size={22} style={{ marginInlineEnd: 4 }} />
+                <WiThermometer size={22} style={{ marginInlineEnd: 4 }} />{' '}
+              </Flex>
+              <Flex direction="column">
+                <Text>Real Feel</Text>
+                <Text size="16px">30o</Text>{' '}
+              </Flex>
+            </Flex>
+          </Stack>
+          {/* Wind Speed Section */}
+          <Stack>
+            <Flex>
+              <Flex direction="column">
+                <IconWind size={22} style={{ marginInlineEnd: 4 }} />{' '}
               </Flex>
               <Flex direction="column">
                 <Text>Wind Speed</Text>
@@ -59,10 +64,11 @@ export function RightSidebar() {
               </Flex>
             </Flex>
           </Stack>
+          {/* Chance of Rain Section */}
           <Stack>
             <Flex>
               <Flex direction="column">
-                <IconDropletFilled size={22} style={{ marginInlineEnd: 4 }} />
+                <IconDropletFilled size={22} style={{ marginInlineEnd: 4 }} />{' '}
               </Flex>
               <Flex direction="column">
                 <Text>Chance of Rain</Text>
@@ -70,10 +76,11 @@ export function RightSidebar() {
               </Flex>
             </Flex>
           </Stack>
+          {/* UV Index Section */}
           <Stack>
             <Flex>
               <Flex direction="column">
-                <IconSun size={22} style={{ marginInlineEnd: 4 }} />
+                <IconSun size={22} style={{ marginInlineEnd: 4 }} />{' '}
               </Flex>
               <Flex direction="column">
                 <Text>UV Index</Text>
